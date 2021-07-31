@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Org Chart</title>
+    <meta name="description" content="Org Chart" />
+    <meta name="author" content="Quang Nguyen" />
+    <link rel="icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+
+  <body>
+    <template id="node-template">
+      <li>
+        <div class="box">
+          <div>
+            <span class="title">title</span>
+          </div>
+          <div class="img">
+            <div>
+              <img src="images/default-avatar.jpg" />
+            </div>
+          </div>
+          <div class="content">
+            <span class="name">name</span>
+          </div>
+        </div>
+        <div class="indicator expand"></div>
+        <ul class="tree"></ul>
+      </li>
+    </template>
+    <div class="container">
+      <div id="org-chart">
+        <ul class="tree"></ul>
+      </div>
+    </div>
+    <script src="scripts/tree.js"></script>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>

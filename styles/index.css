@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  font-family: Muli, sans-serif;
+  font-size: 15px;
+  color: #212121;
+}
+body * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1366px;
+  text-align: center;
+}
+
+#org-chart {
+  height: 900px;
+  padding: 10px;
+  display: block;
+}
+#org-chart ul.tree {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin: 0 0 1em;
+  text-align: center;
+  display: table;
+  opacity: 1;
+}
+#org-chart ul.tree:first-child {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+#org-chart ul.tree:before {
+  outline: solid 1px #666;
+  content: "";
+  height: 0.5em;
+  left: 50%;
+  position: absolute;
+  top: -8px;
+  z-index: -1;
+}
+#org-chart ul.tree:first-child:before {
+  outline: none;
+}
+#org-chart ul.tree li {
+  display: table-cell;
+  padding: 0.5em 0;
+}
+#org-chart ul.tree li:first-child:before {
+  left: 50%;
+}
+#org-chart ul.tree li:last-child:before {
+  right: 50%;
+}
+#org-chart ul.tree li:before {
+  outline: solid 1px #666;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+#org-chart ul.tree li .box {
+  border-radius: 0.2em;
+  display: inline-block;
+  margin: 0 0.2em 0.5em;
+  border: 1px solid #14b1e7;
+  padding: 5px;
+  background: linear-gradient(#fff, #fff 50%, #14b1e7 0, #14b1e7);
+  min-width: 125px;
+}
+#org-chart ul.tree li .box:before {
+  outline: solid 1px #666;
+  content: "";
+  height: 0.5em;
+  left: 50%;
+  top: -0.55em;
+  position: absolute;
+  z-index: -1;
+}
+#org-chart ul.tree li .box span {
+  font-size: 16px;
+  display: block;
+  margin: 2px 0;
+}
+#org-chart ul.tree li .box span.title {
+  font-weight: bold;
+  margin-top: 5px;
+}
+#org-chart ul.tree li .box .img {
+  padding: 5px 10px 10px;
+  margin: 0 5px 10px;
+  border-radius: 50%;
+  background: #fff;
+}
+#org-chart ul.tree li .box .img div {
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+#org-chart ul.tree li .box .img div img {
+  width: 100%;
+}
+#org-chart ul.tree li .box .content {
+  color: #fff;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+#org-chart ul.tree li .box .content .name {
+  font-weight: bold;
+}
+#org-chart > ul.tree > li:first-child::before {
+  outline: none;
+}
+#org-chart > ul.tree > li > .box:first-child::before {
+  outline: none;
+}
+#org-chart .indicator {
+  width: 12px;
+  height: 12px;
+  left: calc(50% - 11px);
+  top: 175px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  background: url(../images/arrow_up.svg);
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+}
+#org-chart .indicator.expand {
+  -webkit-animation: rotation 0.2s linear;
+  transform: rotate(180deg);
+}
+#org-chart .indicator.collapse {
+  -webkit-animation: rotation1 0.2s linear;
+}
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes rotation1 {
+  from {
+    -webkit-transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+  }
+}
+#org-chart .hide {
+  opacity: 0 !important;
+  transition: opacity 0.3s;
+}
+
+/*# sourceMappingURL=index.css.map */
