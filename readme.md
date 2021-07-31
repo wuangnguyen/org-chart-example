@@ -7,6 +7,6 @@ sass --watch styles/index.scss:styles/index.css
 
 Total nodes of the render tree = 10 by default. Use the **renderTree(numberOfNodes)** function to render a new tree with a number of expected nodes randomly.
 
-![image info](./images/demo.png)
+![image info](https://github.com/wuangnguyen/org-chart-example/blob/master/images/demo.PNG?raw=true)
 
 Click to the arrow button to toggle **collapse/expand** function.
